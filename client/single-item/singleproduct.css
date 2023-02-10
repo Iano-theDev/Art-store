@@ -1,0 +1,43 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+
+#top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccc;
+    width: 100%;
+}
+
+#product{
+    display: grid;
+    grid-template-columns: repeat (2,1fr);
+    grid-template-rows: repeat (2,1fr);
+    border: 2px solid burlywood; 
+    grid-template-areas: 
+    "image details"
+    "image adds";
+}
+
+#image{
+    grid-area: image;  
+    border: 2px solid green; 
+}
+
+#details{
+    grid-area: details;
+    border: 2px solid yellow;
+  
+}
+
+#adds{
+    grid-area: adds;
+    border: 2px solid blueviolet;
+
+}

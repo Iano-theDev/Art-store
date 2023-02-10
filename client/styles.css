@@ -108,7 +108,8 @@
     gap: 1em;
     text-align: center;
     border: .1px solid #efefef;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
+    border-radius: 1em;
 }
 
 .card-btn {
@@ -137,7 +138,12 @@
     color: #ffffff;;
 }
 
-.img-container > img {
+.card-img-container {
+    height: 300px;
+    width: 250px;
+}
+
+.card-img-container > img {
     height: 100%;
     width: 100%;
 }
@@ -147,9 +153,10 @@
 /* begin new arrivals */
 .new-arrivals {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 1em;
+    padding: 3em;
 }
 
 .arrivals-heading {
@@ -175,6 +182,23 @@
     color: #ffffff;
 }
 
+.arrival-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+    padding: 1em;
+}
+
+.arrival-card .img-container {
+    width: 200px;
+    height: 300px;
+    margin: 1em;
+}
+
+.img-container > img {
+    height: 100%;
+    width: 100%;
+}
 /* End new arrivals */
 
 
@@ -208,37 +232,5 @@
     font-size: 2em;
 }
 
-.subscribe {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-}
 
-form {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 50%;
-}
 
-.subscribe input {
-    /* width: 100%; */
-    padding: 1em;
-    border-radius: 20px;
-    border: none;
-}
-
-.subscribe button {
-    padding: 1em;
-    border: none;
-    border-radius: .3em;
-    background: #868686;
-    color: aliceblue;
-}
-
-.subscribe button:hover {
-    padding: 1em;
-    border: none;
-    border-radius: .3em;
-
-}

@@ -17,9 +17,11 @@
 
 #product{
     display: grid;
+    gap: 20px;
+    width: 70%;
+    /* background-color: #cccc; */
     grid-template-columns: repeat (2,1fr);
     grid-template-rows: repeat (2,1fr);
-    border: 2px solid burlywood; 
     grid-template-areas: 
     "image details"
     "image adds";
@@ -27,17 +29,14 @@
 
 #image{
     grid-area: image;  
-    border: 2px solid green; 
 }
 
 #details{
-    grid-area: details;
-    border: 2px solid yellow;
-  
+    grid-area: details; 
 }
 
 #adds{
     grid-area: adds;
-    border: 2px solid blueviolet;
-
+    display: flex;
+    gap:28px;
 }

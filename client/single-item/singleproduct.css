@@ -33,6 +33,8 @@
 
 #details{
     grid-area: details; 
+    padding: 10px;
+    background-color: #cccc;
 }
 
 #adds{

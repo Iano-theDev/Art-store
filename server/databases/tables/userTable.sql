@@ -1,0 +1,9 @@
+CREATE TABLE Users
+(
+    userId VARCHAR(100) PRIMARY KEY ,
+    Name VARCHAR(200) ,
+    Email VARCHAR(300) UNIQUE,
+    Password VARCHAR(150) ,
+    Role VARCHAR(100) DEFAULT 'user',
+    isSent VARCHAR(150) DEFAULT '0'
+)

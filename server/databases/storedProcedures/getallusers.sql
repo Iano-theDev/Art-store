@@ -1,0 +1,7 @@
+CREATE PROCEDURE getallusers
+AS
+BEGIN 
+
+SELECT * FROM Users
+
+END

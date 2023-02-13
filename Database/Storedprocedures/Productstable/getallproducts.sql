@@ -1,7 +1,0 @@
-CREATE PROCEDURE getallproducts
-AS
-BEGIN 
-
-SELECT * FROM Products
-
-END

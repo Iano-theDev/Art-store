@@ -5,7 +5,7 @@ import path from 'path'
 dotenv.config({path:path.resolve(__dirname,'../../.env')})
 
 const sql = require('mssql')
-const sqlConfig = {
+export const sqlConfig = {
   user: process.env.DB_USER as string,
   password: process.env.DB_PWD as string,
   database: process.env.DB_NAME as string,
@@ -23,7 +23,7 @@ const sqlConfig = {
 console.log('runnin');
 
 
-const checkConnection = async ()=>{
+export const checkConnection = async ()=>{
   try {
     const x = await mssql.connect(sqlConfig)
     if(x.connecting) {

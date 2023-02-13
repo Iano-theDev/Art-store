@@ -1,12 +1,12 @@
-#content {
+#content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap:60px;
 }
-
-#top {
+  /* First div at the top */
+#top{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,35 +14,45 @@
     background-color: #cccc;
     width: 100%;
 }
+/* Second div containing form,button and links */
 
-#regist {
+#sign{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 20px; */
     background-color: #cccc;
     width: 700px;
     border-radius: 7px;
     padding: 30px;
-    height: 90%;
+
 }
+
+/* the sign-up form */
 form{
     display: flex;
     flex-direction: column;
     width: 70%;
-    gap: 30px;  
-    /* height: 500px */
+    gap: 40px;     
 }
 
 form input {
     height: 30px;
 }
 
-.regbutton {
+/* Sign in button */
+.signin{
     height: 30px;
     width: 100px;
     border: 0.5em;
     border-radius: 7px;
-    background-color: rgba(35, 166, 240, 255);
+    background-color: rgba(35, 166, 240, 255);   
+}
+
+
+/* links */
+#buttns{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }

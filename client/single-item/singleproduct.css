@@ -1,0 +1,44 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+
+#top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccc;
+    width: 100%;
+}
+
+#product{
+    display: grid;
+    gap: 20px;
+    width: 70%;
+    /* background-color: #cccc; */
+    grid-template-columns: repeat (2,1fr);
+    grid-template-rows: repeat (2,1fr);
+    grid-template-areas: 
+    "image details"
+    "image adds";
+}
+
+#image{
+    grid-area: image;  
+}
+
+#details{
+    grid-area: details; 
+    padding: 10px;
+    background-color: #cccc;
+}
+
+#adds{
+    grid-area: adds;
+    display: flex;
+    gap:28px;
+}

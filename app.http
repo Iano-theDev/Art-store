@@ -1,0 +1,44 @@
+
+GET http://localhost:4000/Products
+
+###
+
+POST http://localhost:4000/Products
+Content-Type: application/json
+
+{
+    "Name":"Painting-4",
+    "Description":"Another simple description",
+    "Category":"Painting",
+    "Price":"500",
+    "ImageUrl":"http://the-second-imageurl.url"
+}
+
+###
+
+GET http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
+
+###
+
+PUT http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
+Content-Type: application/json
+
+{
+  "Name": "uPDATED XAMP",
+  "Description": "uPDATES XPM",
+  "Category": "cATEGORY SErver",
+  "Price": 100,
+  "ImageUrl": "http://mommamissa.url"
+}
+
+###
+
+GET http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
+
+###
+
+DELETE http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
+
+
+
+

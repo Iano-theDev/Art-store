@@ -1,6 +1,6 @@
 
 import express, { json } from 'express'
-import authroute from './Router/userRoutes'
+import authroute from './router/userRoutes'
 // import cors from 'cors'
 const app= express()
 

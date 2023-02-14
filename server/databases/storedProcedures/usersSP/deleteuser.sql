@@ -1,6 +1,0 @@
-CREATE PROCEDURE deleteuser(@email VARCHAR(300))
-AS
-BEGIN
-
-	DELETE  FROM Users WHERE Email = @email
-END

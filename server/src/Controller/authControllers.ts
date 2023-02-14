@@ -1,13 +1,13 @@
 import { RequestHandler,Request,Response } from 'express'
 import {v4 as uid} from 'uuid'
-import { LoginSchema, RegistrationSchema } from '../Helpers/validateUser'
-import { DecodedData, User } from '../Models'
+import { LoginSchema, RegistrationSchema } from '../helpers/validateUser'
+import { DecodedData, User } from '../models/indexi'
 import Bcrypt from 'bcrypt'
 import dotenv from 'dotenv'
 import path from 'path'
 import jwt from 'jsonwebtoken'
-import { DatabaseHelper} from '../DatabaseHelpers'
-import { sqlConfig } from '../Config/config'
+import { DatabaseHelper} from '../databaseHelpers'
+import { sqlConfig } from '../config/config'
 import mssql from 'mssql'
 
 const  _db = new DatabaseHelper()
@@ -49,6 +49,17 @@ export const getallusers: RequestHandler = async (req, res) => {
     }
 }
 
+// DEACTIVATE USERS
+export const deactivateuser= async(req:ExtendedRequest,res:Response)=>{
+    try {
+       const {Email} = req.body
+       await _db.exec('deactiveusers', {email:Email})
+       return res.status(200).json({message: "User deactivated"})   
+    } catch (error:any) {
+       return res.status(500).json(error.message)
+    }   
+   } 
+
 
 //USER LOGIN
 export async function loginUser(req:ExtendedRequest, res:Response){
@@ -68,15 +79,15 @@ try {
         return res.status(404).json({error:'Wrong password'})
     }
 
-    // const payload= user.map(item=>{
-    //     const {Password,...rest}=item
-    //     return rest
-    // })
-    // const token = jwt.sign(payload[0], process.env.SECRETKEY as string , {expiresIn:'3600s'})
-    return res.status(200).json({message:'User Loggedin!!!'})
+    const payload= user.map(item=>{
+        const {Password,...rest}=item
+        return rest
+    })
+    const token = jwt.sign(payload[0], process.env.SECRETKEY as string , {expiresIn:'3600s'})
+    return res.status(200).json({message:'User Loggedin!!!', token})
 
-} catch (error) {
-    res.status(500).json(error) 
+} catch (error:any) {
+    res.status(500).json(error.message) 
 }
 }
 

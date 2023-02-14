@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { Homepage, loginUser, RegisterUser, getallusers, } from "../Controller/authControllers";
-import { VerifyToken } from "../Middlewares/verify";
+import { Homepage, loginUser, RegisterUser, getallusers,deactivateuser } from "../controller/authControllers";
+import { VerifyToken } from "../middlewares/verify";
 
 
 
@@ -8,6 +8,7 @@ const authroute =Router()
 
 authroute.post('/register',RegisterUser)
 authroute.post('/login', loginUser)
+authroute.post('/deactivateuser', deactivateuser)
 authroute.get('/allusers', getallusers)
 authroute.get('/home',VerifyToken, Homepage)//protected Route
 

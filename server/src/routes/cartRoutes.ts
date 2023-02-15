@@ -1,10 +1,16 @@
 import { Router } from "express";
-import { getAllCartItems } from "../controllers/cartController";
+import { addToCart, getAllCartItems, getUserCart, reduceCartQuantity } from "../controllers/cartController";
 
 const cartRoutes = Router()
 
 
 cartRoutes.get('', getAllCartItems)
+
+cartRoutes.get('/:userId', getUserCart)
+
+cartRoutes.post('', addToCart)
+
+cartRoutes.put('', reduceCartQuantity)
 
 
 

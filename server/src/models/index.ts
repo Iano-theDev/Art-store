@@ -10,3 +10,11 @@ export class Products{
         public price: number
     ){}
 }
+
+export class Cart {
+    constructor(
+        public productId:string,
+        public userId: string,
+        public quantity: number
+    ){}
+}

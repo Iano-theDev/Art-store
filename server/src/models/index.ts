@@ -18,3 +18,11 @@ export class Cart {
         public quantity: number
     ){}
 }
+
+export class Orders {
+    constructor(
+        public productId:string,
+        public userId: string,
+        public orderStatus: string
+    ){}
+}

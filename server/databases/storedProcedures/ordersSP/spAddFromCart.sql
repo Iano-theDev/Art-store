@@ -1,6 +1,6 @@
 -- add to orders from cart and remove from cart simultaneously--
 
-CREATE proc addFromCart(@uId Varchar(100))
+CREATE proc spAddFromCart(@uId Varchar(100))
 as
 BEGIN
     insert into Orders (productId, userId)

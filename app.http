@@ -39,6 +39,35 @@ GET http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
 
 DELETE http://localhost:4000/Products/a26b601b-613e-498f-a5dd-ebce34a6caba
 
+###
 
+GET http://localhost:4000/cart
+
+
+
+###
+
+POST  http://localhost:4000/cart
+Content-Type: application/json
+
+  {
+    "productId": "11501f5b-c790-4214-9ac2-d9beeab9d229",
+    "userId": "1",
+    "quantity": 2
+  }
+
+###
+
+PUT http://localhost:4000/cart/
+Content-Type: application/json
+
+  {
+    "productId": "11501f5b-c790-4214-9ac2-d9beeab9d229",
+    "userId": "1"
+  }
+
+###
+
+GET http://localhost:4000/cart/
 
 

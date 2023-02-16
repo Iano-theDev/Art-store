@@ -32,11 +32,11 @@ signupBtn.addEventListener("click", async (e) => {
         }, 3000);
     }
     else {
-        let authdata = await createacc(name.value, email.value, password.value);
-        if (authdata) {
+        let authdata = await createacc(name.value, email.value, password.value);{
             let token = authdata['token']
             localStorage.setItem("token", token);
-            window.location.href = "../../../index.html";
+            window.location.href ="../index.html";
+            
         }
     }
 });

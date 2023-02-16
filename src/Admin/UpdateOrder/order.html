@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Order Details</title>
-	<link rel="stylesheet" href="order.css">
-</head>
-<body>
-	<h1>Order Details</h1>
-	<label >OrderID :</label>
-	<input type="text" name="" id="order_id" required>
-  
-	<!-- <label >Order Status::</label>
-	<input type="text" name="" id="order_id" required> -->
-	<form action="/update-order" method="post">
-		<input type="hidden" name="order_id" value="1234">
-		<label for="status">Status:</label>
-		<select name="status" id="status">
-			<option value="pending">Orderd</option>
-			<option value="shipped">In-Transit</option>
-			<option value="delivered">Delivered</option>
-		</select>
-		<input type="submit" value="Update Status">
-	</form>
-</body>
+  <head>
+    <title>Order Details</title>
+    <link rel="stylesheet" href="order.css" />
+  </head>
+  <body>
+	<div class="div">
+		<h1>Order Details</h1>
+		<label>OrderID :</label>
+		<input type="text" name="" id="order_id" required />
+		<label>Order Status :</label>
+		<select name="status" id="order_status">
+			<option value="Ordered">Ordered</option>
+			<option value="In-Transit">In-Transit</option>
+			<option value=">Deliveered">Deliveered</option>
+		  </select>
+	   
+		  </select>
+		  <button id="submit">Update Status</button>
+		 
+	</div>
+    
+   
+  </body>
 </html>

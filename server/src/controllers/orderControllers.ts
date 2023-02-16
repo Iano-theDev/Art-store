@@ -73,7 +73,6 @@ export async function updateOrder(req:Request, res:Response){
         .input('orderStatus', OrderStatus)
         .execute('spUpdateOrderStatus'))
         
-
         if(!order){
             res.status(404).json({error:`No such order`})
         }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="content">
+        <div class="products">
+          <h3 class="Products">Products</h3>
+          <div class="icon">
+            <ion-icon name="bag-remove-sharp"></ion-icon>
+          </div>
+            <div class="buttons_product">
+              <button id="listone_btn">List One</button>
+              <button id="displayall_btn">Display All</button>
+              <button id="updateproduct_btn">Update</button>
+              <a href="/src/index.html"> <button id="addproduct_btn">Add Product</button></a>
+
+              
+            </div>
+            
+
+          
+
+        </div>
+        <div class="Orders">
+          <h3 class="orders">Orders</h3>
+          <div class="icon">
+            <ion-icon name="bowling-ball-sharp"></ion-icon>
+          </div>
+            <div class="buttons">
+              <button id="updateorders_btn">Update</button>
+              <button id="manageorders_btn">Add</button>
+            </div>
+            
+
+          
+
+        </div>
+        <div class="Customers">
+          <h3 class="customers">Customers</h3>
+          <div class="icon">
+            <ion-icon name="people-circle-sharp"></ion-icon>
+          </div>
+            <div class="buttons">
+              <button id="deleteuser_btn">Delete</button>
+              <button
+              id="adduser_btn">Add</button>
+            </div>
+            
+
+        
+
+        </div>
+      </div>
+      
+     
+    </main>
+   
+  </body>
+  <script src="index.ts"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>

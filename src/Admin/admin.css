@@ -82,6 +82,6 @@ main {
 .buttons_product{
   display: flex;
   flex-direction: column;
-  padding-top:108px;
+  padding-top:150px;
   gap: 10px;
 }

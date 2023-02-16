@@ -12,8 +12,8 @@
     <nav>
       <ul>
         <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Orders</a></li>
+        <li><a href="addProduct.html">Products</a></li>
+        <li><a href="UpdateOrder/order.html">Orders</a></li>
         <li><a href="#">Customers</a></li>
         <li><a href="#">Reports</a></li>
         <li><a href="#">Settings</a></li>
@@ -24,13 +24,13 @@
         <div class="products">
           <h3 class="Products">Products</h3>
           <div class="icon">
-            <ion-icon name="bag-remove-sharp"></ion-icon>
+            <img src="/assets/icons8-shopping-cart-100.png" alt="">
           </div>
             <div class="buttons_product">
               <button id="listone_btn">List One</button>
               <button id="displayall_btn">Display All</button>
               <button id="updateproduct_btn">Update</button>
-              <a href="/src/index.html"> <button id="addproduct_btn">Add Product</button></a>
+               <button onclick="location.href='addProduct.html';" id="addproduct_btn">Add Product</button>
 
               
             </div>
@@ -42,7 +42,7 @@
         <div class="Orders">
           <h3 class="orders">Orders</h3>
           <div class="icon">
-            <ion-icon name="bowling-ball-sharp"></ion-icon>
+            <img src="/assets/icons8-list-100.png" alt="">
           </div>
             <div class="buttons">
               <button id="updateorders_btn">Update</button>
@@ -56,7 +56,8 @@
         <div class="Customers">
           <h3 class="customers">Customers</h3>
           <div class="icon">
-            <ion-icon name="people-circle-sharp"></ion-icon>
+            <img src="/assets/icons8-customers-100.png" alt="">
+           
           </div>
             <div class="buttons">
               <button id="deleteuser_btn">Delete</button>
@@ -74,7 +75,5 @@
     </main>
    
   </body>
-  <script src="index.ts"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="/dist/index.js"></script>
 </html>

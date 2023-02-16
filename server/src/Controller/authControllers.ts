@@ -49,7 +49,7 @@ export const getallusers: RequestHandler = async (req, res) => {
     }
 }
 
-// DEACTIVATE USERS
+// DEACTIVATE USERS/SOFT DELETE
 export const deactivateuser= async(req:ExtendedRequest,res:Response)=>{
     try {
        const {Email} = req.body
